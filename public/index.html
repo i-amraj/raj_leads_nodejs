@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Leader Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Raj Leader <span class="highlight">Generator</span></h1>
+            <p>High-Performance Node.js Scraper</p>
+        </header>
+
+        <div class="control-panel glass-panel">
+            <div class="input-group">
+                <label>Category</label>
+                <div class="dropdown" id="categoryDropdown">
+                    <button type="button" class="dropdown-toggle" id="categoryToggle">Select category...</button>
+                    <div class="dropdown-panel hidden" id="categoryPanel">
+                        <input type="text" class="dropdown-search" id="categorySearch" placeholder="Type to search..." />
+                        <div class="dropdown-list" id="categoryList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Country</label>
+                <div class="dropdown" id="countryDropdown">
+                    <button type="button" class="dropdown-toggle" id="countryToggle">Select country...</button>
+                    <div class="dropdown-panel hidden" id="countryPanel">
+                        <input type="text" class="dropdown-search" id="countrySearch" placeholder="Type to search..." />
+                        <div class="dropdown-list" id="countryList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>State</label>
+                <div class="dropdown" id="stateDropdown">
+                    <button type="button" class="dropdown-toggle" id="stateToggle" disabled>Select state...</button>
+                    <div class="dropdown-panel hidden" id="statePanel">
+                        <input type="text" class="dropdown-search" id="stateSearch" placeholder="Type to search..." />
+                        <div class="dropdown-list" id="stateList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>City</label>
+                <div class="dropdown" id="cityDropdown">
+                    <button type="button" class="dropdown-toggle" id="cityToggle" disabled>Select city...</button>
+                    <div class="dropdown-panel hidden" id="cityPanel">
+                        <input type="text" class="dropdown-search" id="citySearch" placeholder="Type to search..." />
+                        <div class="dropdown-list" id="cityList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Area (Optional)</label>
+                <div class="dropdown" id="areaDropdown">
+                    <button type="button" class="dropdown-toggle" id="areaToggle" disabled>Select area...</button>
+                    <div class="dropdown-panel hidden" id="areaPanel">
+                        <input type="text" class="dropdown-search" id="areaSearch" placeholder="Type to search..." />
+                        <div class="dropdown-list" id="areaList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group action-group">
+                <button id="scrapeBtn" class="primary-btn">
+                    <span>Start Scraping</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </div>
+        </div>
+
+        <div class="status-bar hidden" id="statusBar">
+            <div class="loader"></div>
+            <span id="statusText">Ready to scrape...</span>
+        </div>
+
+        <div class="tracking-panel glass-panel hidden" id="trackingPanel">
+            <div class="tracking-header">
+                <h2>Live Tracking</h2>
+                <span id="trackingPhase">Idle</span>
+            </div>
+            <div class="tracking-progress">
+                <div id="trackingBar"></div>
+            </div>
+            <div class="tracking-log" id="trackingLog">
+                <!-- Live logs -->
+            </div>
+        </div>
+
+        <div class="results-container glass-panel hidden" id="resultsContainer">
+            <div class="results-header">
+                <h2>Results <span id="resultCount" class="badge">0</span></h2>
+                <button class="secondary-btn hidden" id="getMoreBtn">Get More</button>
+                <button class="secondary-btn" id="downloadBtn">Download CSV</button>
+            </div>
+            <div class="table-wrapper">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Rating</th>
+                            <th>Website</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

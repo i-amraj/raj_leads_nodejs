@@ -1,0 +1,66 @@
+{
+    "countries": [
+        {
+            "name": "India",
+            "states": [
+                {
+                    "name": "Uttar Pradesh",
+                    "cities": [
+                        "Lucknow",
+                        "Kanpur",
+                        "Varanasi",
+                        "Agra",
+                        "Noida"
+                    ]
+                },
+                {
+                    "name": "Delhi",
+                    "cities": [
+                        "New Delhi",
+                        "Dwarka",
+                        "Rohini",
+                        "Saket"
+                    ]
+                },
+                {
+                    "name": "Maharashtra",
+                    "cities": [
+                        "Mumbai",
+                        "Pune",
+                        "Nagpur",
+                        "Thane"
+                    ]
+                },
+                {
+                    "name": "Rajasthan",
+                    "cities": [
+                        "Jaipur",
+                        "Jodhpur",
+                        "Udaipur",
+                        "Ajmer"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Nepal",
+            "states": [
+                {
+                    "name": "Bagmati",
+                    "cities": [
+                        "Kathmandu",
+                        "Lalitpur",
+                        "Bhaktapur"
+                    ]
+                },
+                {
+                    "name": "Gandaki",
+                    "cities": [
+                        "Pokhara",
+                        "Gorkha"
+                    ]
+                }
+            ]
+        }
+    ]
+}
